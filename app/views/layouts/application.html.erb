@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ParamsRailsLivecode1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+      <nav>
+          <div></div>
+          <ul>
+              <li><%= link_to( 'home', index_path ) %></li>
+              <li><a href="#">portfolio</a></li>
+              <li><a href="#">code thoughts</a></li>
+              <li><a href="#">about me</a></li>
+          </ul>
+      </nav>
+      <h1>Leah Bueing</h1>
+    </header>
+
+    <%= yield %>
+
+    <section class="buffer"></section>
+
+    <footer>
+      <h4>&copy; 2016</h4>
+    </footer>
+
+
+</body>
+</html>
