@@ -5,5 +5,5 @@
 
   <p> <%= link_to("Edit", edit_path(@mypost[:id])) %></p>
 
-  <p> <%= link_to("Delete", delete_path(@mypost[:id]), method: :) %></p>
+  <p> <%= link_to("Delete", delete_path(@mypost[:id]), method: :destroy) %></p>
 </article>

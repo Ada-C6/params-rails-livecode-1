@@ -24,9 +24,27 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @posts = PostsController.allposts
+    @mypost = nil
+
+    @posts.each do |post|
+      number = params[:id].to_i #This is a method that takes a parameter and returns it as a string
+
+      if post[:id] == number
+        @mypost = post
+      end
+    end
+    if @mypost == nil
+      @mypost ={id: params[:id].to_i, title: "Did not find", body: ""}
+    end
   end
 
   def update
+    show
+
+    @mypost[:title] = params["title"]
+    @mypost[:author] = params["author"]
+    @mypost[:body] = params["body"]
   end
 
   def destroy
