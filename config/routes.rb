@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+
+  #rails shorthand for controller#method
+  root to: 'posts#index'
+
+  get 'posts/index', as: 'index'
 
   get 'posts/show'
 
-  get 'posts/show/:id' => 'posts#show'
+  get 'posts/show/:id' => 'posts#show', as: 'show' #The link method now has a show_path, because we named it as show
 
   get 'posts/new'
 
-  get 'posts/edit'
+  get 'posts/:id/edit'  => 'posts#edit', as: 'edit'
 
   get 'posts/update'
 
-  get 'posts/destroy'
+  delete 'posts/:id/destroy' => 'posts#destroy', as: 'delete'
+
+  post 'posts/create' => 'posts#create', as: 'create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

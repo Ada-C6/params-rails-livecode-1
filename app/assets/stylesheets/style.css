@@ -1,0 +1,145 @@
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+html {
+  /*'Carrois Gothic SC'*/
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 34px;
+	height: 100%;
+  /*There's a one line way to do this...I forgot my notes but look that up..*/
+}
+
+
+body {
+  /* change background color later */
+  background-color: white;
+  display: inline-block;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+}
+
+header {
+  display: block;
+  width: 100vw;
+  padding-bottom: 3vh;
+}
+
+header {
+  background-color: black;
+  color: white;
+}
+
+
+header nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+header nav {
+  display: inline-block;
+  width: 25vw;
+  margin: auto 3%;
+  padding-top: 6vh;
+}
+
+
+header h1.name {
+  display: inline;
+  font-size: 3.5em;
+  /* 2.3 rem */
+  padding-top: 3vh;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  color: white;
+  text-decoration-style: none;
+  float: right;
+  vertical-align: bottom;
+  margin-right: 4vh;
+}
+
+header h1.name a {
+  color: white;
+  display: inline-block;
+}
+header h1.name a:visited {
+  color: white;
+}
+
+header h1.name a:hover {
+  color: orange;
+}
+
+header nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
+header nav a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+
+
+
+footer {
+  display: block;
+  width: 100vw;
+  border: 1px solid black;
+  margin-top: auto;
+  background-color: black;
+  color: white;
+  vertical-align: middle;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+footer h4 {
+  display: inline-block;
+  font-size: .5rem;
+  height: auto;
+  vertical-align: middle;
+  font-weight: 200;
+  margin: auto;
+}
+
+
+
+header nav ul li a {
+  color: white;
+}
+
+header nav ul li a:visited {
+  color: white;
+}
+
+header nav ul li a.home {
+  color: rgb(102, 122, 209);
+  opacity: 1.0;
+}
+
+header nav ul:hover > li a.home {
+  opacity: 0.7;
+}
+
+header nav ul li a.home:hover {
+  color: rgb(102, 122, 209);
+  opacity: 1.0;
+}
+/*
+h1 {
+  display: inline;
+  font-family: 3em;
+  color: white;
+  padding: 4vh;
+}*/

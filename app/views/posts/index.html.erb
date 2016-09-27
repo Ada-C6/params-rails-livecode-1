@@ -1,7 +1,7 @@
 <h1>Welcome to My Blog</h1>
 <% @posts.each do |post|%> <!-- This is ruby code - like a puts takes the user's input and prints it -->
   <article>
-    <h2> <a href="show/<%=post[:id]%>"> <%= post[:title] %> </a></h2>
+    <h2> <%= link_to( post[:title], show_path(post[:id]) )%></h2>
     <h3> By: <%= post[:author] %> </h3>
     <p>  <%= post[:body] %></p>
   </article>
