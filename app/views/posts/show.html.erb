@@ -1,9 +1,9 @@
 <article>
-  <h1> <%= @mypost[:title] %></h1>
-  <h2> <%= @mypost[:author] %></h2>
-  <p> <%= @mypost[:body] %></p>
+  <h1> <%= @mypost.title %></h1>
+  <h2> <%= @mypost.author %></h2>
+  <p> <%= @mypost.body %></p>
 
-  <p> <%= link_to("Edit", edit_path(@mypost[:id])) %></p>
+  <p> <%= link_to("Edit", edit_path(@mypost.id)) %></p>
 
-  <p> <%= link_to("Delete", delete_path(@mypost[:id]), method: :destroy) %></p>
+  <p> <%= button_to "Delete", {action: "destroy", id: @mypost.id}, method: :delete, data: {confirm: "Are you sure?"} %></p>
 </article>

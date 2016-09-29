@@ -1,6 +1,23 @@
 <h1> Create a Blog Post </h1>
 <!-- create a new form, call is something in particular, post is the html method name (could use put/patch to update) -->
 <!-- The action attribute tells the app where to go -->
+<%= form_for @mypost, url: create_path do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- This is now tied to a database and will automatically fill in if there's info still in -->
+
+
+<!--
 <form name="new-post" action="create" method="post">
   <label for="title">Title:</label>
   <input type="text" name="title" id="title"/>
@@ -13,4 +30,4 @@
   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)%>
 
   <button type="submit">Submit</button>
-</form>
+</form> -->

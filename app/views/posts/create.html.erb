@@ -1,9 +1,13 @@
 <!-- When created - creates a hash (RUBY !) -->
 
 <article>
-  <p>  <%# @params %>  </p>
-  <h1>  <%= @title %>  </h1>
-  <h2>  <%= @author %>  </h2>
-  <p>  <%= @body %>  </p>
+  <!-- <p>  <%= @params %>  </p> -->
+  <h1>  <%= @mypost.title %>  </h1>
+  <h2>  <%= @mypost.author %>  </h2>
+  <p>  <%= @mypost.body %>  </p>
 
 </article>
+
+<p>
+  <%= link_to "Home", index_path %>
+</p>

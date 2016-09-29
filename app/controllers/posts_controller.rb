@@ -1,26 +1,15 @@
 class PostsController < ApplicationController
   def index
     @welcome_msg = "Hola Amigo!"
-    @posts = PostsController.allposts
+    @posts = Post.all
   end
 
   def show
-    @posts = PostsController.allposts
-    @mypost = nil
-
-    @posts.each do |post|
-      number = params[:id].to_i #This is a method that takes a parameter and returns it as a string
-
-      if post[:id] == number
-        @mypost = post
-      end
-    end
-    if @mypost == nil
-      @mypost ={id: params[:id].to_i, title: "Did not find", body: ""}
-    end
+    @mypost = Post.find(params[:id].to_i)
   end
 
   def new
+    @mypost = Post.new
   end
 
   def edit
@@ -42,19 +31,23 @@ class PostsController < ApplicationController
   def update
     show
 
-    @mypost[:title] = params["title"]
-    @mypost[:author] = params["author"]
-    @mypost[:body] = params["body"]
+    @mypost[:title] = params["post"]["title"]
+    @mypost[:author] = params["post"]["author"]
+    @mypost[:body] = params["post"]["body"]
   end
 
   def destroy
+    @mypost = Post.destroy(params[:id].to_i)
   end
 
   def create
     @params = params
-    @title = params["title"]
-    @author = params['author']
-    @body = params['body']
+    @mypost = Post.new
+    @mypost.title = params[:post][:title]
+    @mypost.author = params[:post][:author]
+    @mypost.body = params[:post][:body]
+
+    @mypost.save
   end
 
   def self.allposts

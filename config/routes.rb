@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get 'posts/show/:id' => 'posts#show', as: 'show' #The link method now has a show_path, because we named it as show
 
-  get 'posts/new'
+  get 'posts/new' #=> 'posts#show', as: 'new'
+  post 'posts' => 'posts#create', as: 'create'
 
   get 'posts/:id/edit'  => 'posts#edit', as: 'edit'
 

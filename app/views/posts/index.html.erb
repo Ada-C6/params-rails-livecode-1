@@ -1,9 +1,9 @@
 <h1>Welcome to My Blog</h1>
 <% @posts.each do |post|%> <!-- This is ruby code - like a puts takes the user's input and prints it -->
   <article>
-    <h2> <%= link_to( post[:title], show_path(post[:id]) )%></h2>
-    <h3> By: <%= post[:author] %> </h3>
-    <p>  <%= post[:body] %></p>
+    <h2> <%= link_to( post.title, show_path(post.id) )%></h2>
+    <h3> By: <%= post.author %> </h3>
+    <p>  <%= post.body %></p>
   </article>
 
   <!-- There's no evidence of the the ruby code in developer tools -->

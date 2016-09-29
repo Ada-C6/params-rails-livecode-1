@@ -9,7 +9,15 @@
 <body>
   <header>
     <nav>
-        <p class="home"><%= link_to("Home", index_path)%> </p>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "New Post", posts_new_path %>
+        </li>
+      </ul>
+        <!-- <p class="home"><%= link_to("Home", index_path)%> </p> -->
     </nav>
     <h1 class="name" ><%= link_to("Nina Mutty", index_path) %></h1>
   </header>
