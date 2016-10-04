@@ -8,3 +8,14 @@
     %>
 </p>
 </article>
+<section>
+  <h2>Comments</h2>
+  <% @comments.each do |comment| %>
+    <article>
+      <p><%= comment.body %></p>
+      <p><%= link_to "Edit Comment",
+            edit_comment_path(@mypost.id,
+                              comment.id) %>
+    </article>
+  <% end %>
+</section>

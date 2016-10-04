@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'posts/show/:id/comments/:comment_id/edit' => 'comments#edit',
+      as: 'edit_comment'
+
+  get 'comments/update'
+
+  get 'comments/new'
+
+  get 'comments/create'
+
+  get 'comments/destroy'
+
   root to: 'posts#index'
 
   get 'posts/index', as: 'index'

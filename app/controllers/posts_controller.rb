@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @mypost = findPost
+    @comments = @mypost.comments
   end
 
   def new
